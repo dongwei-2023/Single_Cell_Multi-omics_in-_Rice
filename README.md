@@ -24,4 +24,4 @@ If you have a question, error, bug, or problem, please use the [Github issue pag
 
 ## Notes
 
-Contact: Zhe Liang & Xiaofeng Gu at Biotechnology Research Institute, Chinese Academy of Agricultural Sciences# Single_Cell_Multiomics_in_Rice
+Contact: Zhe Liang & Xiaofeng Gu at Biotechnology Research Institute, Chinese Academy of Agricultural Sciences
