@@ -20,7 +20,7 @@ Cell functions across eucaryotes are driven by specific gene expression programs
 For usage of the code and associated manuscript,  If you use our codes, please cite our paper [A single-cell multiomics atlas of rice](https://github.com/dongwei-2023/Single_Cell_Multiomics_in_Rice).
 
 ## Questions and errors
-If you have a question, error, bug, or problem, please use the [Github issue page](https://github.com/dongwei-2023/Rice-Root-Cell-Type-Prediction-Tool/issues).
+If you have a question, error, bug, or problem, please use the [Github issue page](https://github.com/dongwei-2023/Single_Cell_Multiomics_in_Rice/issues).
 
 ## Notes
 
