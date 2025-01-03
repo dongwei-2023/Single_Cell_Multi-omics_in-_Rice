@@ -242,6 +242,7 @@ For usage of the code and associated manuscript,  If you use our codes, please c
 ## Questions and errors
 If you have a question, error, bug, or problem, please use the [Github issue page](https://github.com/dongwei-2023/Single_Cell_Multiomics_in_Rice/issues).
 
-## Notes
-
-Contact: Zhe Liang & Xiaofeng Gu at Biotechnology Research Institute, Chinese Academy of Agricultural Sciences
+## Contact  
+  - **Zhe Liang**: [liangzhe@caas.cn](mailto:liangzhe@caas.cn)  
+  - **Xiaofeng Gu**: [guxiaofeng@caas.cn](mailto:guxiaofeng@caas.cn)  
+  Biotechnology Research Institute, Chinese Academy of Agricultural Sciences
