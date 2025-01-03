@@ -9,7 +9,7 @@ Cell functions across eucaryotes are driven by specific gene expression programs
 ![image](https://github.com/dongwei-2023/Single_Cell_Multiomics_in_Rice/blob/master/img/pipeline.png)
 
 ## Raw and processed data 
-* The raw and processed data of single-cell multiomics, scRNA-seq and RNA-seq have been deposited into NCBI GEO with accession numbers: [GSE232863](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE232863), [GSE273875](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE273875), [GSE245410](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE245410). Processed single-cell multiomics seurat objects are available from [GSE232863_rice_scRNA_scATAC_all.Rdata.gz](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE232863&format=file&file=GSE232863%5Frice%5FscRNA%5FscATAC%5Fall%2ERdata%2Egz) and processed LTPL120 seurat objects are available from [GSE273875_LTP_NIP_label_240622.rds.gz](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE273875&format=file&file=GSE273875%5FLTP%5FNIP%5Flabel%5F240622%2Erds%2Egz).
+* The raw and processed data of single-cell multiomics, scRNA-seq and RNA-seq have been deposited into NCBI GEO with accession numbers: [GSE232863](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE232863), [GSE273875](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE273875), [GSE245410](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE245410). Processed single-cell multiomics seurat objects are available from [GSE232863_rice_scRNA_scATAC_all.Rdata.gz](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE232863&format=file&file=GSE232863%5Frice%5FscRNA%5FscATAC%5Fall%2ERdata%2Egz) and processed LTPL120 seurat objects are available from [GSE273875_LTP_NIP_label_240622.rds.gz](https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE273875&format=file&file=GSE273875%5FLTP%5FNIP%5Flabel%5F240622%2Erds%2Egz).The raw and processed data of single-cell multiomics of Spikelet have been deposited into NCBI GEO with accession numbers:[GSE285639](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE285639).
 
 * Single Cell Multi-omics in Rice chromatin accessibility and RNA expression zonation profiles can be browsed via our web-app: https://www.elabcaas.cn/scmr/
 
@@ -17,7 +17,7 @@ Cell functions across eucaryotes are driven by specific gene expression programs
 
 # R Scripts for single nuclei expression and chromatin analyses
 
-This repository contains a series of R scripts designed to handle various aspects of RNA-seq data analysis, particularly focusing on sci-RNA-seq3 demultiplexing, clustering, and visualization for Rice and Sorghum experiments. Each script is tailored to specific stages of the data analysis pipeline.
+This repository contains a series of scripts designed to handle various aspects of single-cell multiomics data analysis for rice. The scripts cover the entire workflow, including quality control, doublet removal, data integration, clustering, cell type annotation, differential expression analysis, motif and regulatory network analysis, and visualization. The analysis leverages tools like Seurat, Signac, DoubletFinder, Harmony, WGCNA, cellOracle and Monocle to process and interpret single-cell RNA-seq and ATAC-seq data. The outputs include UMAP visualizations, marker gene identification, pseudotime trajectory analysis, motif enrichment results, and cross-species comparisons, providing a comprehensive pipeline for single-cell multiomics studies in rice.
 
 ## Overview of Scripts
 
