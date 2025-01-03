@@ -15,7 +15,7 @@ Cell functions across eucaryotes are driven by specific gene expression programs
 
 * Processed zonation tables are provided as supplementary tables in the manuscript. 
 
-# R Scripts for single nuclei expression and chromatin analyses
+# Scripts for single-cell multiomics analyses
 
 This repository contains a series of scripts designed to handle various aspects of single-cell multiomics data analysis for rice. The scripts cover the entire workflow, including quality control, doublet removal, data integration, clustering, cell type annotation, differential expression analysis, motif and regulatory network analysis, and visualization. The analysis leverages tools like Seurat, Signac, DoubletFinder, Harmony, WGCNA, cellOracle and Monocle to process and interpret single-cell RNA-seq and ATAC-seq data. The outputs include UMAP visualizations, marker gene identification, pseudotime trajectory analysis, motif enrichment results, and cross-species comparisons, providing a comprehensive pipeline for single-cell multiomics studies in rice.
 
@@ -67,7 +67,7 @@ This repository contains a series of scripts designed to handle various aspects 
 
 
 
-### 4.1integrated.R
+### 4.1 integrated.R
 
 - **Purpose**: This script processes single-cell multiome data (RNA-seq + ATAC-seq) using **Signac** and **Seurat**. It integrates gene expression and chromatin accessibility data, performs clustering, and generates visualizations.
 
@@ -83,7 +83,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Processed data** saved as `rice.sub.Rdata` for downstream analysis.
 
 
-### 4.2integrated.R
+### 4.2 integrated.R
 
 - **Purpose**: This script integrates single-cell RNA-seq and ATAC-seq data using **Harmony** and **Seurat**, performs joint clustering, and generates visualizations for tissue and cluster annotations.
 
@@ -135,7 +135,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **cisTarget motif database** files for use in regulatory network analysis (e.g., SCENIC).
 
 
-## 6.3_runPySCENIC.sh
+### 6.3_runPySCENIC.sh
 - **Purpose**: This script runs the **pySCENIC** pipeline to infer gene regulatory networks (GRNs) from single-cell RNA-seq data. It performs three main steps: GRN inference, motif enrichment analysis, and regulon activity scoring.
 
 - **Inputs**:
