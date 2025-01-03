@@ -155,7 +155,7 @@ This repository contains a series of scripts designed to handle various aspects 
 
 
 ### 6.4_RSR1_gene_KO_simulation_with_rice_root.ipynb
-- **Purpose**: This script performs **in silico gene perturbation analysis** using **CellOracle** to simulate the effects of gene knockout (e.g., `Os05g0121600`) on cell identity and gene regulatory networks. It visualizes predicted cell state transitions and vector fields(Figure 2f-h).
+- **Purpose**: This script performs **in silico gene perturbation analysis** using [CellOracle](https://github.com/morris-lab/CellOracle) to simulate the effects of gene knockout (e.g., `Os05g0121600`) on cell identity and gene regulatory networks. It visualizes predicted cell state transitions and vector fields(Figure 2f-h).
 
 - **Inputs**:
   - **Pre-processed CellOracle object** (`rice_root.celloracle.oracle`) containing single-cell RNA-seq data and GRN information.
