@@ -39,7 +39,7 @@ This repository contains a series of scripts designed to handle various aspects 
 
 ### 02.QC.R
 
-- **Purpose**: This script processes single-cell RNA-seq data using **Seurat** and **DoubletFinder** to perform quality control, doublet removal, clustering, and visualization for multiple rice tissue samples. It includes steps for filtering low-quality cells, identifying doublets, and analyzing gene expression patterns (Figure S1).
+- **Purpose**: This script processes single-cell RNA-seq data using **Seurat** and **DoubletFinder** to perform quality control, doublet removal, clustering, and visualization for multiple rice tissue samples. It includes steps for filtering low-quality cells, identifying doublets, and analyzing gene expression patterns (Figure S1; Figure s3a-d).
 
 - **Inputs**:
   - **Single-cell RNA-seq data**: Filtered feature-barcode matrices for multiple samples (e.g., `leaf_1`, `Root_1`, etc.).
@@ -67,7 +67,7 @@ This repository contains a series of scripts designed to handle various aspects 
 
 ### 04.wnn_integrated.R
 
-- **Purpose**: This script processes single-cell multiomics data (RNA-seq + ATAC-seq) using **Signac** and **Seurat** to integrate gene expression and chromatin accessibility data. It performs clustering, visualization, and quality control for rice samples (Figure 1).
+- **Purpose**: This script processes single-cell multiomics data (RNA-seq + ATAC-seq) using **Signac** and **Seurat** to integrate gene expression and chromatin accessibility data. It performs clustering, visualization, and quality control for rice samples (Figure 1b,1d).
 
 - **Inputs**:
   - **Filtered feature-barcode matrices**: Combined RNA-seq and ATAC-seq data from `/aggr/all/outs/filtered_feature_bc_matrix/`.
@@ -99,7 +99,7 @@ This repository contains a series of scripts designed to handle various aspects 
 
 ### 06.correlation.R
 
-- **Purpose**: This script performs correlation analysis on single-cell RNA-seq and ATAC-seq data to explore relationships between gene expression and chromatin accessibility. It generates correlation heatmaps and integrates RNA-seq and ATAC-seq data for rice samples(Figure 2a).
+- **Purpose**: This script performs correlation analysis on single-cell RNA-seq and ATAC-seq data to explore relationships between gene expression and chromatin accessibility. It generates correlation heatmaps and integrates RNA-seq and ATAC-seq data for rice samples(Figure 2a;Figure s1e;Figure s3f).
 
 - **Inputs**:
   - **Pre-processed Seurat object**: Loaded from `rice.sub.Rdata`, containing RNA-seq and ATAC-seq data.
@@ -114,7 +114,7 @@ This repository contains a series of scripts designed to handle various aspects 
 
 ### 07.motif_TF.R
 
-- **Purpose**: This script performs motif analysis and visualization for single-cell ATAC-seq data using **Signac** and **motifmatchr**. It identifies enriched transcription factor motifs, computes chromatin accessibility profiles, and generates coverage plots for specific genes.
+- **Purpose**: This script performs motif analysis and visualization for single-cell ATAC-seq data using **Signac** and **motifmatchr**. It identifies enriched transcription factor motifs, computes chromatin accessibility profiles, and generates coverage plots for specific genes (Figure 2b-e).
 
 - **Inputs**:
   - **Pre-processed Seurat object**: Loaded from `rice.sub.Rdata`, containing ATAC-seq data.
@@ -139,7 +139,7 @@ This repository contains a series of scripts designed to handle various aspects 
 
 
 ### 09.runPySCENIC.sh
-- **Purpose**: This script runs the **pySCENIC** pipeline to infer gene regulatory networks (GRNs) from single-cell RNA-seq data. It performs three main steps: GRN inference, motif enrichment analysis, and regulon activity scoring(Figure S2 h-k).
+- **Purpose**: This script runs the **pySCENIC** pipeline to infer gene regulatory networks (GRNs) from single-cell RNA-seq data. It performs three main steps: GRN inference, motif enrichment analysis, and regulon activity scoring(Figure S3h-k).
 
 - **Inputs**:
   - **Single-cell RNA-seq data**: Loom file containing gene expression data (`s1_rice_scRNA_count_cells_genes.loom`).
@@ -179,7 +179,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Integrated Seurat object** and processed data saved for downstream analysis. 
  
 ### 12.hdWGCNA.R
-- **Purpose**: This script performs **Weighted Gene Co-expression Network Analysis (WGCNA)** using the **hdWGCNA** package to identify co-expression modules and analyze their functional relevance in single-cell RNA-seq data.
+- **Purpose**: This script performs **Weighted Gene Co-expression Network Analysis (WGCNA)** using the **hdWGCNA** package to identify co-expression modules and analyze their functional relevance in single-cell RNA-seq data (Figure 3b-c;Figure 4c;Figure 7a).
 
 - **Inputs**:
   - **Pre-processed Seurat object** (`alldata.Rdata`) containing single-cell RNA-seq data.
@@ -191,7 +191,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Heatmaps** showing module correlations and gene expression patterns. 
  
 ### 13.Epidermis_Vascular_monocle3.R
-- **Purpose**: This script performs **pseudotime trajectory analysis** using **Monocle3** to study cell differentiation and developmental trajectories in single-cell RNA-seq data.
+- **Purpose**: This script performs **pseudotime trajectory analysis** using **Monocle3** to study cell differentiation and developmental trajectories in single-cell RNA-seq data (Figure s4;Figure s5;Figure s6).
 
 - **Inputs**:
   - **Single-cell RNA-seq count data** and metadata.
@@ -215,7 +215,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Heatmaps** and **UMAP visualizations** of conserved and species-specific gene expression patterns. 
  
 ### 15.processed_LTPL120.R
-- **Purpose**: This script performs single-cell RNA-seq data analysis using **Seurat** and **DoubletFinder** to process and analyze data from multiple samples (LTP and NIP). It includes quality control, doublet removal, data integration, clustering, and differential expression analysis.
+- **Purpose**: This script performs single-cell RNA-seq data analysis using **Seurat** and **DoubletFinder** to process and analyze data from multiple samples (LTP and NIP). It includes quality control, doublet removal, data integration, clustering, and differential expression analysis (Figure 4u-w;Figure s8).
 
 - **Inputs**:
   - **Single-cell RNA-seq data** for LTP and NIP samples.
