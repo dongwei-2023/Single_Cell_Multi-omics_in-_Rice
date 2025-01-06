@@ -39,7 +39,7 @@ This repository contains a series of scripts designed to handle various aspects 
 
 ### 02.QC.R
 
-- **Purpose**: This script processes single-cell RNA-seq data using **Seurat** and **DoubletFinder** to perform quality control, doublet removal, clustering, and visualization for multiple rice tissue samples. It includes steps for filtering low-quality cells, identifying doublets, and analyzing gene expression patterns (Figure S1; Figure s3a-d).
+- **Purpose**: This script processes single-cell RNA-seq data using **Seurat** and **DoubletFinder** to perform quality control, doublet removal, clustering, and visualization for multiple rice tissue samples. It includes steps for filtering low-quality cells, identifying doublets, and analyzing gene expression patterns (Figure s1; Figure s3a-d).
 
 - **Inputs**:
   - **Single-cell RNA-seq data**: Filtered feature-barcode matrices for multiple samples (e.g., `leaf_1`, `Root_1`, etc.).
@@ -139,7 +139,7 @@ This repository contains a series of scripts designed to handle various aspects 
 
 
 ### 09.runPySCENIC.sh
-- **Purpose**: This script runs the **pySCENIC** pipeline to infer gene regulatory networks (GRNs) from single-cell RNA-seq data. It performs three main steps: GRN inference, motif enrichment analysis, and regulon activity scoring(Figure S3h-k).
+- **Purpose**: This script runs the **pySCENIC** pipeline to infer gene regulatory networks (GRNs) from single-cell RNA-seq data. It performs three main steps: GRN inference, motif enrichment analysis, and regulon activity scoring(Figure s3h-k).
 
 - **Inputs**:
   - **Single-cell RNA-seq data**: Loom file containing gene expression data (`s1_rice_scRNA_count_cells_genes.loom`).
@@ -166,7 +166,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Visualizations** of gene expression changes and cell identity shifts. 
  
 ### 11.leaf_Flag.R
-- **Purpose**: This script performs single-cell RNA-seq data analysis using **Seurat** and **Monocle** to study cell type-specific gene expression, pseudotime trajectories, and differential expression between tissues (e.g., leaf and flag). It also integrates data from multiple samples and performs functional enrichment analysis.
+- **Purpose**: This script performs single-cell RNA-seq data analysis using **Seurat** and **Monocle** to study cell type-specific gene expression, pseudotime trajectories, and differential expression between tissues (e.g., leaf and flag). It also integrates data from multiple samples and performs functional enrichment analysis(Figure 6se-h).
 
 - **Inputs**:
   - **Single-cell RNA-seq data** for leaf and flag tissues.
@@ -191,7 +191,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Heatmaps** showing module correlations and gene expression patterns. 
  
 ### 13.Epidermis_Vascular_monocle3.R
-- **Purpose**: This script performs **pseudotime trajectory analysis** using **Monocle3** to study cell differentiation and developmental trajectories in single-cell RNA-seq data (Figure s4;Figure s5;Figure s6).
+- **Purpose**: This script performs **pseudotime trajectory analysis** using **Monocle3** to study cell differentiation and developmental trajectories in single-cell RNA-seq data (Figure s4;Figure s5;Figure s6i-j).
 
 - **Inputs**:
   - **Single-cell RNA-seq count data** and metadata.
