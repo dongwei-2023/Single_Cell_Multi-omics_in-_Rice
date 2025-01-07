@@ -70,7 +70,7 @@ This repository contains a series of scripts designed to handle various aspects 
     - **Clustering and visualization results**: UMAP plots and other visualizations.
     - **Analysis summaries**: Web reports (`web_summary.html`) and metrics (`metrics_summary.csv`).
 
-### 02.QC removes doublet cells and determines resolution
+### 02.QC removes doublet cells
 
 - **Purpose**: This script processes single-cell RNA-seq data using **Seurat** and **DoubletFinder** to perform quality control, doublet removal, clustering, and visualization for multiple rice tissue samples. It includes steps for filtering low-quality cells, identifying doublets, and analyzing gene expression patterns (Figure s1; Figure s3a-d).
 
