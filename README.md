@@ -23,7 +23,7 @@ Ensure that R version 4.2.2 is installed on your system. Download it from [CRAN]
 ### Installing Required Libraries
 ```R
 # Read the requirements file
-requirements <- read.table("script/00.R_requirements.txt", header = FALSE, skip = 1, sep = "_", stringsAsFactors = FALSE, col.names = c("Package", "Version"))
+requirements <- read.table("00.R_requirements.txt", header = FALSE, skip = 1, sep = "_", stringsAsFactors = FALSE, col.names = c("Package", "Version"))
 # Check for missing packages and install them
 missing_packages <- setdiff(requirements$Package, installed.packages()[, "Package"])
 if (length(missing_packages) > 0) {
