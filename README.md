@@ -54,7 +54,7 @@ This repository contains a series of scripts designed to handle various aspects 
 
 ## Overview of Scripts
 
-### 01.CellRanger ARC analyze Multiomics data
+### 01.Multiomics Analysis with CellRanger ARC
 
 - **Purpose**: This script processes single-cell multiomics data (RNA-seq + ATAC-seq) using **Cell Ranger ARC** to generate count matrices for multiple rice samples. It includes data preparation, quality control, and analysis of gene expression and chromatin accessibility.
 
@@ -98,7 +98,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Feature plots**: UMAP plots showing expression of top marker genes.
   - **Integrated Seurat objects**: Merged and processed data for each tissue type, saved as `alldata.Rdata`.
 
-### 04.Integration based on ATAC and RNA data
+### 04.Integration of ATAC and RNA Data
 
 - **Purpose**: This script processes single-cell multiomics data (RNA-seq + ATAC-seq) using **Signac** and **Seurat** to integrate gene expression and chromatin accessibility data. It performs clustering, visualization, and quality control for rice samples (Figure 1b,1d).
 
@@ -115,7 +115,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Saved Seurat object**: Processed data saved as `rice.sub.Rdata`.
 
 
-### 05.Integration of single-cell data with Harmony
+### 05.Data Integration with Harmony
 
 - **Purpose**: This script integrates single-cell RNA-seq and ATAC-seq data using **Harmony** and **Seurat** to perform batch correction, clustering, and visualization. It focuses on analyzing rice tissue samples and generating UMAP visualizations for integrated data.
 
@@ -145,7 +145,7 @@ This repository contains a series of scripts designed to handle various aspects 
     - Correlation values between RNA-seq and ATAC-seq data (`atac_RNA.cor.csv`).
 
 
-### 07.Analyzing the TF and motif by Signac
+### 07.TF and Motif Analysis with Signac
 
 - **Purpose**: This script performs motif analysis and visualization for single-cell ATAC-seq data using **Signac** and **motifmatchr**. It identifies enriched transcription factor motifs, computes chromatin accessibility profiles, and generates coverage plots for specific genes (Figure 2b-e).
 
