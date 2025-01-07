@@ -14,7 +14,6 @@ tissue_order <- c("Root", "ST", "leaf", "Flag", "SAM", "Bud", "SP", "Seed")
 tissue.colors <- scales::hue_pal()(8)
 names(tissue.colors) <- c("Bud", "Flag", "leaf", "Root", "SAM", "Seed", "SP", "ST")
 
-
 DefaultAssay(obj) <- "ATAC"
 obj <-
     RunHarmony(
@@ -22,7 +21,6 @@ obj <-
         group.by.vars = "tissue",
         reduction.use = "lsi",
         assay.use = "ATAC",
-        project.dim = FALSE
     )
 
 obj[["integrated_atac"]] <-
@@ -58,7 +56,6 @@ obj <- FindMultiModalNeighbors(
     verbose = TRUE
 )
 ### Build a joint UMAP visualization
-
 obj <- RunUMAP(
     object = obj,
     nn.name = "weighted.nn",
@@ -80,7 +77,7 @@ DimPlot(obj,
 DimPlot(obj, group.by = "cluster_names") + scale_color_manual(values = clusters_colors)
 dev.off()
 
-obj$final_id2 <-
+obj$final_id <-
     data.frame(cluster = obj$cluster_names, tissue = obj$tissue) %>%
     mutate(scluster = paste(tissue, cluster, sep = ":")) %>%
     mutate(cluster_id = dense_rank(scluster)) %>%
@@ -88,7 +85,7 @@ obj$final_id2 <-
 dd <- data.frame(
     obj@reductions$wsnnumap@cell.embeddings,
     tissue = obj$tissue,
-    final_id = obj$final_id2,
+    final_id = obj$final_id,
     name_id = obj$cluster_names
 )
 sid.cor <- dd %>%
@@ -113,7 +110,7 @@ dev.off()
 
 
 
-pdf("new.harmony4.number.pdf", 12, 9)
+pdf("new.harmony.number.pdf", 12, 9)
 ggplot(dd, aes(wsnnUMAP_1, wsnnUMAP_2)) +
     rasterise(geom_point(aes(color = name_id), size = 0.1, alpha = 0.4)) +
     geom_text_repel(data = sid.cor, aes(label = final_id)) +

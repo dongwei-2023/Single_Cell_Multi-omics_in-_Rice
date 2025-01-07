@@ -300,7 +300,6 @@ for (i in names(ms.sct.markers.ann)) {
     print(p)
 }
 dev.off()
-# allbp <- lapply(ms.sct.markers.ann,plot_anno,type = "BP",style = "bar")
 
 ###########################################
 

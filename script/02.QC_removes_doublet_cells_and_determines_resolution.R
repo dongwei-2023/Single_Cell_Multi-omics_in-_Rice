@@ -35,7 +35,7 @@ get_doublet <- function(obj) {
 
 ############### create seurat obj
 samples <- c("leaf_1", "leaf_2", "Root_1", "Root_2", "Bud_2", "Flag_1", "Flag_2", "Seed_31", "Seed_32", "SAM_1", "SAM_2", "Bud_21", "Bud_22")
-for(sampleName in samples){
+for (sampleName in samples) {
     a <- Read10X(paste0("../", sampleName, "/outs/filtered_feature_bc_matrix/"))
     print(paste0(ana.dir, sampleName))
     dir.create(paste0(ana.dir, sampleName))
@@ -59,9 +59,9 @@ for(sampleName in samples){
         pbmc.rna <- subset(pbmc, subset = nFeature_RNA > 200 & nFeature_RNA < 8000 & nCount_RNA > umi)
         dim(pbmc.rna)
         p1 <- VlnPlot(pbmc.rna, features = c("nFeature_RNA", "nCount_RNA"), ncol = 2)
-        ggsave(p1, filename = "QC2_violin.pdf")
+        ggsave(p1, filename = "QC_violin.pdf")
         p2 <- FeatureScatter(pbmc.rna, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
-        ggsave(p2, filename = "QC2_scatter.pdf")
+        ggsave(p2, filename = "QC_scatter.pdf")
 
         pbmc.rna <- NormalizeData(pbmc.rna) %>%
             FindVariableFeatures() %>%
@@ -69,7 +69,7 @@ for(sampleName in samples){
             RunPCA()
         pbmc.rna <- get_doublet(pbmc.rna)
         p <- DimPlot(pbmc.rna, group.by = "doublet")
-        ggsave(p, filename = "QC2_doublet.pdf")
+        ggsave(p, filename = "QC_doublet.pdf")
         table(pbmc.rna$doublet) %>%
             data.frame() %>%
             write.csv("doublet.csv", row.names = F)
@@ -91,7 +91,7 @@ for(sampleName in samples){
             scale_color_manual(values = colorRampPalette(pal_npg()(9))(20)) +
             theme(legend.position = "bottom") + ggtitle(label = paste0("cell number:", ncol(pbmc.rna), "\n", "UMI cutoff:", umi))
         # p
-        ggsave(p, filename = "QC2_clustree.pdf", height = 9, width = 7)
+        ggsave(p, filename = "QC_clustree.pdf", height = 9, width = 7)
         save(pbmc.rna, file = paste0("data.", i, ".Rdata"))
     })
 }

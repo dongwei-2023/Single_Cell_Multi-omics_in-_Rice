@@ -3,10 +3,7 @@ library(Signac)
 library(ggplot2)
 library(dplyr)
 library(motifmatchr)
-# library(JASPAR2020)
 library(TFBSTools)
-library(Signac)
-library(Seurat)
 library(EnsDb.Osativa.v55)
 library(BSgenome.O.sativa.Ensembl.MSU7)
 
@@ -100,23 +97,6 @@ for (xx in unique(rice.sub$tissue)) {
         region = "Os03g0821200",
         # Dof:LOC-Os03g60630
         features = "Os03g0821200",
-        expression.assay = "RNA",
-        extend.upstream = 5000,
-        extend.downstream = 5000,
-        idents = grep(xx, unique(rice.sub$tissue_cluster), value = T),
-        annotation = T
-    )
-    print(cowplot::plot_grid(p, labels = xx))
-}
-dev.off()
-
-pdf("RSR1.CoveragePlot.pdf", 8, 6)
-for (xx in unique(rice.sub$tissue)) {
-    p <- CoveragePlot(
-        object = rice.sub,
-        region = "Os05g0121600",
-        # RSR1
-        features = "Os05g0121600",
         expression.assay = "RNA",
         extend.upstream = 5000,
         extend.downstream = 5000,

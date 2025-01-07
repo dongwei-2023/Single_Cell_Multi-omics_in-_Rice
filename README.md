@@ -15,6 +15,39 @@ Cell functions across eucaryotes are driven by specific gene expression programs
 
 * Processed zonation tables are provided as supplementary tables in the manuscript. 
 
+
+## Environment Setup
+
+Ensure that R version 4.2.2 is installed on your system. Download it from [CRAN](https://cran.r-project.org/mirrors.html).
+
+### Installing Required Libraries
+```R
+# Read the requirements file
+requirements <- read.table("script/00.R_requirements.txt", header = FALSE, skip = 1, sep = "_", stringsAsFactors = FALSE, col.names = c("Package", "Version"))
+# Check for missing packages and install them
+missing_packages <- setdiff(requirements$Package, installed.packages()[, "Package"])
+if (length(missing_packages) > 0) {
+  install.packages(missing_packages)
+}
+# Verify installation
+# Re-check installed packages
+installed <- installed.packages()[, "Package"]
+# Identify any packages that failed to install
+failed_to_install <- setdiff(missing_packages, installed)
+if (length(failed_to_install) > 0) {
+  warning("The following packages failed to install:", paste(failed_to_install, collapse = ", "))
+} else {
+  message("All packages installed successfully.")
+}
+```
+### Clone the Repository
+
+Clone this repository to access the scripts on your local machine:
+ ```bash
+git clone https://github.com/dongwei-2023/Single_Cell_Multiomics_in_Rice
+```
+
+
 # Scripts for single-cell multiomics analyses
 
 This repository contains a series of scripts designed to handle various aspects of single-cell multiomics data analysis for rice. The scripts cover the entire workflow, including quality control, doublet removal, data integration, clustering, cell type annotation, differential expression analysis, motif and regulatory network analysis, and visualization. The analysis leverages tools like Seurat, Signac, DoubletFinder, Harmony, WGCNA, cellOracle and Monocle to process and interpret single-cell RNA-seq and ATAC-seq data. The outputs include UMAP visualizations, marker gene identification, pseudotime trajectory analysis, motif enrichment results, and cross-species comparisons, providing a comprehensive pipeline for single-cell multiomics studies in rice.
