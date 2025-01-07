@@ -54,7 +54,7 @@ This repository contains a series of scripts designed to handle various aspects 
 
 ## Overview of Scripts
 
-### 01.CellRanger_ARC_analyze_Multiomics_data.sh
+### 01.CellRanger ARC analyze Multiomics data
 
 - **Purpose**: This script processes single-cell multiomics data (RNA-seq + ATAC-seq) using **Cell Ranger ARC** to generate count matrices for multiple rice samples. It includes data preparation, quality control, and analysis of gene expression and chromatin accessibility.
 
@@ -70,7 +70,7 @@ This repository contains a series of scripts designed to handle various aspects 
     - **Clustering and visualization results**: UMAP plots and other visualizations.
     - **Analysis summaries**: Web reports (`web_summary.html`) and metrics (`metrics_summary.csv`).
 
-### 02.QC_removes_doublet_cells_and_determines_resolution.R
+### 02.QC removes doublet cells and determines resolution
 
 - **Purpose**: This script processes single-cell RNA-seq data using **Seurat** and **DoubletFinder** to perform quality control, doublet removal, clustering, and visualization for multiple rice tissue samples. It includes steps for filtering low-quality cells, identifying doublets, and analyzing gene expression patterns (Figure s1; Figure s3a-d).
 
@@ -84,7 +84,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Clustering results** and visualizations (UMAP, clustree plots).
   - **Processed Seurat objects** saved as `.Rdata` files for downstream analysis.
 
-### 03.Merging_duplicate_samples_within_the_same_tissue.R
+### 03.Merging duplicate samples within the same tissue
 
 - **Purpose**: This script processes single-cell RNA-seq data for multiple rice tissue samples using **Seurat**. It performs clustering, marker gene identification, and visualization, followed by data integration and dimensionality reduction for each tissue type.
 
@@ -98,7 +98,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Feature plots**: UMAP plots showing expression of top marker genes.
   - **Integrated Seurat objects**: Merged and processed data for each tissue type, saved as `alldata.Rdata`.
 
-### 04.Integration_based_on_ATAC_and_RNA_data.R
+### 04.Integration based on ATAC and RNA data
 
 - **Purpose**: This script processes single-cell multiomics data (RNA-seq + ATAC-seq) using **Signac** and **Seurat** to integrate gene expression and chromatin accessibility data. It performs clustering, visualization, and quality control for rice samples (Figure 1b,1d).
 
@@ -115,7 +115,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Saved Seurat object**: Processed data saved as `rice.sub.Rdata`.
 
 
-### 05.Integration_of_single-cell_data_with_Harmony.R
+### 05.Integration of single-cell data with Harmony
 
 - **Purpose**: This script integrates single-cell RNA-seq and ATAC-seq data using **Harmony** and **Seurat** to perform batch correction, clustering, and visualization. It focuses on analyzing rice tissue samples and generating UMAP visualizations for integrated data.
 
@@ -130,7 +130,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Quality control metrics**: Nucleosome signal and TSS enrichment scores.
 
 
-### 06.Correlation_analysis_of_RNA_and_ATAC.R
+### 06.Correlation analysis of RNA and ATAC
 
 - **Purpose**: This script performs correlation analysis on single-cell RNA-seq and ATAC-seq data to explore relationships between gene expression and chromatin accessibility. It generates correlation heatmaps and integrates RNA-seq and ATAC-seq data for rice samples(Figure 2a;Figure s1e;Figure s3f).
 
@@ -145,7 +145,7 @@ This repository contains a series of scripts designed to handle various aspects 
     - Correlation values between RNA-seq and ATAC-seq data (`atac_RNA.cor.csv`).
 
 
-### 07.Analyzing_the_TF_and_motif_by_Signac.R
+### 07.Analyzing the TF and motif by Signac
 
 - **Purpose**: This script performs motif analysis and visualization for single-cell ATAC-seq data using **Signac** and **motifmatchr**. It identifies enriched transcription factor motifs, computes chromatin accessibility profiles, and generates coverage plots for specific genes (Figure 2b-e).
 
@@ -158,7 +158,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Coverage plots**: For specific genes (e.g., `Os03g0821200` and `Os05g0121600`) across tissues.
 
 
-### 08.Create_the_ranking_and_score_database.sh
+### 08.Create the ranking and score database
 
 - **Purpose**: This script creates a **cisTarget motif database** for rice using the [create_cisTarget_databases] pipeline(https://github.com/aertslab/create_cisTarget_databases). It processes genomic regions and motif data to generate a database for regulatory network analysis.
 
