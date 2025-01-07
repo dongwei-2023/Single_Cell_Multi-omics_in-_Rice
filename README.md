@@ -171,7 +171,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **cisTarget motif database**: A set of files prefixed with `db_prefix`, containing motif enrichment scores for the provided genomic regions. These files can be used as input for **SCENIC** or other regulatory network analysis tools.
 
 
-### 09.Construction_gene_regulatory_networks_with_PySCENIC.sh
+### 09.Construction gene regulatory networks with PySCENIC
 - **Purpose**: This script runs the **pySCENIC** pipeline to infer gene regulatory networks (GRNs) from single-cell RNA-seq data. It performs three main steps: GRN inference, motif enrichment analysis, and regulon activity scoring(Figure s3h-k).
 
 - **Inputs**:
@@ -187,7 +187,7 @@ This repository contains a series of scripts designed to handle various aspects 
 
 
 
-### 10.RSR1_gene_KO_simulation_with_rice_root.ipynb
+### 10.RSR1 gene KO simulation with rice root
 - **Purpose**: This script performs **in silico gene perturbation analysis** using [CellOracle](https://github.com/morris-lab/CellOracle) to simulate the effects of gene knockout (e.g., `Os05g0121600`) on cell identity and gene regulatory networks. It visualizes predicted cell state transitions and vector fields(Figure 2f-h).
 
 - **Inputs**:
@@ -198,7 +198,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Quiver plots** and **vector field graphs** showing predicted cell state transitions after gene perturbation.
   - **Visualizations** of gene expression changes and cell identity shifts. 
  
-### 11.Comparison_of_the_differences_between_Leaf_and_Flag.R
+### 11.Comparison of the differences between Leaf and Flag
 - **Purpose**: This script performs single-cell RNA-seq data analysis using **Seurat** and **Monocle** to study cell type-specific gene expression, pseudotime trajectories, and differential expression between tissues (e.g., leaf and flag). It also integrates data from multiple samples and performs functional enrichment analysis(Figure 6se-h).
 
 - **Inputs**:
@@ -211,7 +211,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Pseudotime trajectory analysis** using Monocle.
   - **Integrated Seurat object** and processed data saved for downstream analysis. 
  
-### 12.Perform_gene_co-expression_network_analysis_with_hdWGCNA.R
+### 12.Perform gene co-expression network analysis with hdWGCNA
 - **Purpose**: This script performs **Weighted Gene Co-expression Network Analysis (WGCNA)** using the **hdWGCNA** package to identify co-expression modules and analyze their functional relevance in single-cell RNA-seq data (Figure 3b-c;Figure 4c;Figure 7a).
 
 - **Inputs**:
@@ -223,7 +223,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Module eigengene visualizations** and functional enrichment analysis.
   - **Heatmaps** showing module correlations and gene expression patterns. 
  
-### 13.Trajactory_analysis_of_Epidermis_and_Vascular_with_Monocle3.R
+### 13.Trajactory analysis of Epidermis and Vascular with Monocle3
 - **Purpose**: This script performs **pseudotime trajectory analysis** using **Monocle3** to study cell differentiation and developmental trajectories in single-cell RNA-seq data (Figure s4;Figure s5;Figure s6i-j).
 
 - **Inputs**:
@@ -235,7 +235,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Pseudotime plots** showing differentiation trajectories.
   - **Processed Monocle3 object** saved for further analysis. 
   
-### 14.Comparative_analysis_of_cross-species_integration.R
+### 14.Comparative analysis of cross-species integration
 - **Purpose**: This script integrates and analyzes single-cell RNA-seq data across multiple species (rice, maize, Setaria, Sorghum, and Arabidopsis) using **Seurat**. It identifies conserved and species-specific gene expression patterns, performs differential expression analysis, and visualizes results.
 
 - **Inputs**:
@@ -247,7 +247,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Differential expression results** and functional enrichment analysis.
   - **Heatmaps** and **UMAP visualizations** of conserved and species-specific gene expression patterns. 
  
-### 15.Analyzing_scRNA_of_LTPL120.R
+### 15.Analyzing scRNA of LTPL120
 - **Purpose**: This script performs single-cell RNA-seq data analysis using **Seurat** and **DoubletFinder** to process and analyze data from multiple samples (LTP and NIP). It includes quality control, doublet removal, data integration, clustering, and differential expression analysis (Figure 4u-w;Figure s8).
 
 - **Inputs**:
@@ -260,7 +260,7 @@ This repository contains a series of scripts designed to handle various aspects 
   - **Cluster-specific marker genes** and cell type annotations.
   - **Differential expression analysis** between LTP and NIP conditions. 
 
-### 16.Plot_funciton_for_DensityScatter.R
+### 16.Plot funciton for DensityScatter
 - **Purpose**: This script defines a function `DensityScatter` to create a density scatter plot for visualizing the relationship between two variables in a Seurat object. It includes options for log transformation and quantile-based thresholding.
 
 - **Inputs**:
